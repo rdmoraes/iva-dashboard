@@ -4,7 +4,8 @@ import awsconfig from './aws-exports';
 import { withAuthenticator } from 'aws-amplify-react'
 import '@aws-amplify/ui/dist/style.css';
 import './main.css'
-import Init from './Init';
+import Init from './pages/Init';
+import LineGraph from './pages/LineGraph'
 
 Amplify.configure(awsconfig);
 
@@ -12,9 +13,10 @@ Amplify.configure(awsconfig);
 
 function App() {
   return (
-    <Init />
+    //<Init />
+    <LineGraph />
     );
 }
 
-//export default App;
-export default withAuthenticator(App, true);
+export default App;
+//export default withAuthenticator(App, true);

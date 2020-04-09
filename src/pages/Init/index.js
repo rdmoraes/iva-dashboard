@@ -1,13 +1,16 @@
 import React from 'react';
 
 import './styles.css';
-import logo from '../assets/logo.svg'
+import logo from '../../assets/logo.svg'
 
 function Init(){
     return(
-        <div className="init-container">
+        <div className="main-container">
+            
             <img src={logo} alt="logo"/>
+            <div className="footer"> HEy</div>
         </div>
+        
     );
 }
 
