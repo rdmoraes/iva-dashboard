@@ -62,9 +62,6 @@ class LineGraph extends Component{
                 theme: "light2",
                 animationEnabled: true,
                 zoomEnabled: true,
-                title:{
-                    text: "Frequency Domain Analyses"
-                },
                 axisY:{
                     includeZero: false
                 },
