@@ -20,6 +20,8 @@ class DashChart extends Component{
             data: [],
             axisDirection: props.axisDirection,
             lineColor: props.lineColor,
+            labelAxisY: props.labelAxisY,
+            labelAxisX: props.labelAxisX
             
         }
     }
@@ -101,10 +103,10 @@ class DashChart extends Component{
                 zoomEnabled: true,
                 axisY:{
                     includeZero: false,
-                    title: "Magnitude"
+                    title: this.state.labelAxisY,
                 },
                 axisX:{
-                    title: "Frequency"
+                    title: this.state.labelAxisX,
                 },
                 data : [{
                     type: "column",

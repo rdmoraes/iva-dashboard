@@ -52,27 +52,57 @@ function DashBoard(){
             <ul className="graph-container">
                 <li>
                     <strong>Time Domain (X - axis) </strong>
-                    <DashChart axisDirection="x-axis-raw" lineColor="#ffb677" displayRefresh={isRefresh}/> 
+                    <DashChart 
+                    axisDirection="x-axis-raw" 
+                    lineColor="#ffb677" 
+                    displayRefresh={isRefresh}
+                    labelAxisY="mg"
+                    labelAxisX="millisecs"/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (X - axis) </strong>
-                    <DashChart axisDirection="x-axis" lineColor="#ffb677" displayRefresh={isRefresh}/> 
+                    <DashChart 
+                    axisDirection="x-axis" 
+                    lineColor="#ffb677" 
+                    displayRefresh={isRefresh}
+                    labelAxisY="dB"
+                    labelAxisX="frequency"/> 
                 </li>
                 <li>
                     <strong>Time Domain (Y - axis) </strong>
-                    <DashChart axisDirection="y-axis-raw" lineColor="#3b6978" displayRefresh={isRefresh}/> 
+                    <DashChart 
+                    axisDirection="y-axis-raw" 
+                    lineColor="#3b6978" 
+                    displayRefresh={isRefresh}
+                    labelAxisY="mg"
+                    labelAxisX="millisecs"/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Y - axis) </strong>
-                    <DashChart axisDirection="y-axis" lineColor="#3b6978" displayRefresh={isRefresh}/> 
+                    <DashChart 
+                    axisDirection="y-axis" 
+                    lineColor="#3b6978" 
+                    displayRefresh={isRefresh}
+                    labelAxisY="dB"
+                    labelAxisX="frequency"/> 
                 </li>
                 <li>
                     <strong>Time Domain (Z - axis) </strong>
-                    <DashChart axisDirection="z-axis-raw" lineColor="#8566aa" displayRefresh={isRefresh}/> 
+                    <DashChart 
+                    axisDirection="z-axis-raw" 
+                    lineColor="#8566aa" 
+                    displayRefresh={isRefresh}
+                    labelAxisY="mg"
+                    labelAxisX="millisecs"/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Z - axis) </strong>
-                    <DashChart axisDirection="z-axis" lineColor="#8566aa" displayRefresh={isRefresh}/> 
+                    <DashChart 
+                    axisDirection="z-axis" 
+                    lineColor="#8566aa" 
+                    displayRefresh={isRefresh}
+                    labelAxisY="dB"
+                    labelAxisX="frequency"/> 
                 </li>
                                 
             </ul>
