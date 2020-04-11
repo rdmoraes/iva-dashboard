@@ -52,7 +52,7 @@ function DashBoard(){
             <ul className="graph-container">
                 <li>
                     <strong>Time Domain (X - axis) </strong>
-                    <LineGraph axisDirection="x-axis" lineColor="#ffb677" displayRefresh={isRefresh}/> 
+                    <LineGraph axisDirection="x-axis-raw" lineColor="#ffb677" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (X - axis) </strong>
@@ -60,7 +60,7 @@ function DashBoard(){
                 </li>
                 <li>
                     <strong>Time Domain (Y - axis) </strong>
-                    <LineGraph axisDirection="y-axis" lineColor="#3b6978" displayRefresh={isRefresh}/> 
+                    <LineGraph axisDirection="y-axis-raw" lineColor="#3b6978" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Y - axis) </strong>
@@ -68,7 +68,7 @@ function DashBoard(){
                 </li>
                 <li>
                     <strong>Time Domain (Z - axis) </strong>
-                    <LineGraph axisDirection="z-axis" lineColor="#8566aa" displayRefresh={isRefresh}/> 
+                    <LineGraph axisDirection="z-axis-raw" lineColor="#8566aa" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Z - axis) </strong>
