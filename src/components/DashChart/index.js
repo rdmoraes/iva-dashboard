@@ -9,7 +9,7 @@ var CanvasJsChart = CanvasJsReact.CanvasJSChart;
 var Component = React.Component;
 
 
-class LineGraph extends Component{
+class DashChart extends Component{
     
     constructor(props){
         super(props);
@@ -121,5 +121,5 @@ class LineGraph extends Component{
     }
 }
 
-export default LineGraph;
+export default DashChart;
 //module.exports = Dash;
