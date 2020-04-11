@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import LineGraph from '../../components/LineGraph'
 import {FiRefreshCcw} from 'react-icons/fi'
 
@@ -9,16 +9,27 @@ import './styles.css';
 
 function DashBoard(){
 
-    async function handleTakeSampleButton(e){
+    const[isRefresh, setRefresh] =useState(false);
+
+    async function handleTakeSampleButton(){
         
         try{
-            const response = await iotApi.post('publish',{"command": "takeSample"});
-
-            console.log(response.data.status);
+            const response = await iotApi.post('publish',{"command": "takeSample"});   
+            const date = new Date(parseInt(response.data.body.timestamp));
+            
+            console.log("Request status",response.data.body.status);
+            alert('Request performed ID: '+ response.data.body.timestamp + " " + date.toString());
+            
         }catch(err){
             alert('IoT device connection fail!');
         }
 
+    }
+
+    function refreshPage() {
+        window.location.reload(false);
+        setRefresh(true);
+        console.log(isRefresh);
     }
 
     return(
@@ -33,34 +44,35 @@ function DashBoard(){
                 </button>
                 <button 
                     className="button-refresh" 
-                    type="button">
+                    type="button"
+                    onClick={refreshPage}>
                     <FiRefreshCcw size={18} color="#2090db75" />
-                </button>
+                </button>                
             </header>
             <ul className="graph-container">
                 <li>
                     <strong>Time Domain (X - axis) </strong>
-                    <LineGraph/> 
+                    <LineGraph axisDirection="x-axis" lineColor="#ffb677" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (X - axis) </strong>
-                    <LineGraph/> 
+                    <LineGraph axisDirection="x-axis" lineColor="#ffb677" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Time Domain (Y - axis) </strong>
-                    <LineGraph/> 
+                    <LineGraph axisDirection="y-axis" lineColor="#3b6978" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Y - axis) </strong>
-                    <LineGraph/> 
+                    <LineGraph axisDirection="y-axis" lineColor="#3b6978" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Time Domain (Z - axis) </strong>
-                    <LineGraph/> 
+                    <LineGraph axisDirection="z-axis" lineColor="#8566aa" displayRefresh={isRefresh}/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Z - axis) </strong>
-                    <LineGraph/> 
+                    <LineGraph axisDirection="z-axis" lineColor="#8566aa" displayRefresh={isRefresh}/> 
                 </li>
                                 
             </ul>
