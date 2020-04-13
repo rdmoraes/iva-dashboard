@@ -57,15 +57,7 @@ class DashChart extends Component{
                 throw new Error(`Unsupported tag name "${this.state.axisDirection}"`);
         }
         return data;
-        // if(this.state.axisDirection === "x-axis"){
-        //     return JSON.parse(res.data.body.Item.x_axis);
-        // }
-        // else if(this.state.axisDirection ==="y-axis"){
-        //     return JSON.parse(res.data.body.Item.y_axis);
-        // }
-            
-        // return JSON.parse(res.data.body.Item.z_axis);
-
+      
         })
         .then(data =>{
             for(var i=0; i <data.length; i++){
@@ -124,4 +116,3 @@ class DashChart extends Component{
 }
 
 export default DashChart;
-//module.exports = Dash;
