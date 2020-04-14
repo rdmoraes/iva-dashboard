@@ -9,7 +9,7 @@ var CanvasJsChart = CanvasJsReact.CanvasJSChart;
 var Component = React.Component;
 
 
-class DashChart extends Component{
+class FFTChart extends Component{
     
     constructor(props){
         super(props);
@@ -28,9 +28,10 @@ class DashChart extends Component{
 
     //Handle asynch request before render JSX
     componentDidMount(){
-       let xLabel =1, yLabel=0;
+             
        let dataPoints = [];
        let data;
+       
               
         apiData.get('getAnalysedData')      
        .then(res => {
@@ -60,10 +61,16 @@ class DashChart extends Component{
       
         })
         .then(data =>{
-            for(var i=0; i <data.length; i++){
+            const freqSample = 2000;
+            const numSamples = data.length;
+            const freqRatio = freqSample/(numSamples)
+            let yLabel=0;
+            let xLabel = 0;
+            
+            for(var i=0; i <data.length/2; i++){
                 yLabel = data[i];
                 dataPoints.push({x:xLabel, y: yLabel});
-                xLabel++;
+                xLabel = xLabel+ freqRatio;
             }
             this.setState({
                 isLoaded: true,
@@ -94,11 +101,11 @@ class DashChart extends Component{
                 animationEnabled: true,
                 zoomEnabled: true,
                 axisY:{
-                    includeZero: false,
-                    title: this.state.labelAxisY,
+                   title: this.state.labelAxisY,
                 },
                 axisX:{
                     title: this.state.labelAxisX,
+                    includezero: true,
                 },
                 data : [{
                     type: "column",
@@ -115,4 +122,4 @@ class DashChart extends Component{
     }
 }
 
-export default DashChart;
+export default FFTChart;

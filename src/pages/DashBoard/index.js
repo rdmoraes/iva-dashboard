@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import DashChart from '../../components/DashChart'
+import FFTChart from '../../components/FFTChart'
+import RawDataChart from '../../components/RawDataChart'
 import {FiRefreshCcw} from 'react-icons/fi'
 
 import logoText from '../../assets/logoText.svg'
@@ -52,7 +53,7 @@ function DashBoard(){
             <ul className="graph-container">
                 <li>
                     <strong>Time Domain (X - axis) </strong>
-                    <DashChart 
+                    <RawDataChart 
                     axisDirection="x-axis-raw" 
                     lineColor="#ffb677" 
                     displayRefresh={isRefresh}
@@ -61,7 +62,7 @@ function DashBoard(){
                 </li>
                 <li>
                     <strong>Frequency Domain (X - axis) </strong>
-                    <DashChart 
+                    <FFTChart 
                     axisDirection="x-axis" 
                     lineColor="#ffb677" 
                     displayRefresh={isRefresh}
@@ -70,7 +71,7 @@ function DashBoard(){
                 </li>
                 <li>
                     <strong>Time Domain (Y - axis) </strong>
-                    <DashChart 
+                    <RawDataChart 
                     axisDirection="y-axis-raw" 
                     lineColor="#3b6978" 
                     displayRefresh={isRefresh}
@@ -79,7 +80,7 @@ function DashBoard(){
                 </li>
                 <li>
                     <strong>Frequency Domain (Y - axis) </strong>
-                    <DashChart 
+                    <FFTChart 
                     axisDirection="y-axis" 
                     lineColor="#3b6978" 
                     displayRefresh={isRefresh}
@@ -88,7 +89,7 @@ function DashBoard(){
                 </li>
                 <li>
                     <strong>Time Domain (Z - axis) </strong>
-                    <DashChart 
+                    <RawDataChart 
                     axisDirection="z-axis-raw" 
                     lineColor="#8566aa" 
                     displayRefresh={isRefresh}
@@ -97,7 +98,7 @@ function DashBoard(){
                 </li>
                 <li>
                     <strong>Frequency Domain (Z - axis) </strong>
-                    <DashChart 
+                    <FFTChart 
                     axisDirection="z-axis" 
                     lineColor="#8566aa" 
                     displayRefresh={isRefresh}
