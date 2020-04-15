@@ -57,8 +57,8 @@ function DashBoard(){
                     axisDirection="x-axis-raw" 
                     lineColor="#ffb677" 
                     displayRefresh={isRefresh}
-                    labelAxisY="mg"
-                    labelAxisX="millisecs"/> 
+                    labelAxisY="Acceleration (g)"
+                    labelAxisX="Time (ms)"/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (X - axis) </strong>
@@ -66,8 +66,8 @@ function DashBoard(){
                     axisDirection="x-axis" 
                     lineColor="#ffb677" 
                     displayRefresh={isRefresh}
-                    labelAxisY="dB"
-                    labelAxisX="frequency"/> 
+                    labelAxisY="Amplitude (dB)"
+                    labelAxisX="Frequency (Hz)"/> 
                 </li>
                 <li>
                     <strong>Time Domain (Y - axis) </strong>
@@ -75,8 +75,8 @@ function DashBoard(){
                     axisDirection="y-axis-raw" 
                     lineColor="#3b6978" 
                     displayRefresh={isRefresh}
-                    labelAxisY="mg"
-                    labelAxisX="millisecs"/> 
+                    labelAxisY="Acceleration (g)"
+                    labelAxisX="Time (ms)"/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Y - axis) </strong>
@@ -84,8 +84,8 @@ function DashBoard(){
                     axisDirection="y-axis" 
                     lineColor="#3b6978" 
                     displayRefresh={isRefresh}
-                    labelAxisY="dB"
-                    labelAxisX="frequency"/> 
+                    labelAxisY="Amplitude (dB)"
+                    labelAxisX="Frequency (Hz)"/> 
                 </li>
                 <li>
                     <strong>Time Domain (Z - axis) </strong>
@@ -93,8 +93,8 @@ function DashBoard(){
                     axisDirection="z-axis-raw" 
                     lineColor="#8566aa" 
                     displayRefresh={isRefresh}
-                    labelAxisY="mg"
-                    labelAxisX="millisecs"/> 
+                    labelAxisY="Acceleration (g)"
+                    labelAxisX="Time (ms)"/> 
                 </li>
                 <li>
                     <strong>Frequency Domain (Z - axis) </strong>
@@ -102,8 +102,8 @@ function DashBoard(){
                     axisDirection="z-axis" 
                     lineColor="#8566aa" 
                     displayRefresh={isRefresh}
-                    labelAxisY="dB"
-                    labelAxisX="frequency"/> 
+                    labelAxisY="Amplitude (dB)"
+                    labelAxisX="Frequency (Hz)"/> 
                 </li>
                                 
             </ul>
